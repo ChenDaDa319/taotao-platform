@@ -40,10 +40,39 @@
         <zkclient.version>0.10</zkclient.version>
         <zookeeper.version>3.4.9</zookeeper.version>
         <javassist.version>3.18.1-GA</javassist.version>
+
+        <mapper.version>2.3.4</mapper.version>
+        <jsqlparser.version>0.9.1</jsqlparser.version>
+        <jackson.version>2.9.2</jackson.version>
+        <persistence.api.version>1.0.2</persistence.api.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--JPA注解-->
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence.api.version}</version>
+            </dependency>
+            <!-- 通用Mapper 将MyBatis由面向过程转换成了面向对象 -->
+            <dependency>
+                <groupId>com.github.abel533</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mapper.version}</version>
+            </dependency>
+
+            <!-- 分页助手 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${jsqlparser.version}</version>
+            </dependency>
             <!--dubbo-->
             <dependency>
                 <groupId>com.alibaba</groupId>
